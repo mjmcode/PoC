@@ -213,6 +213,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <None Include="Properties\PublishProfiles\mmTodoListService - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\mmTodoListService - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\strockisservice - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\strockisservice - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\strockisservice - Web Deploy %282%29.pubxml" />

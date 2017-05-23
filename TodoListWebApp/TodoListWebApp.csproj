@@ -182,6 +182,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <None Include="Properties\PublishProfiles\mmTodoListWebApp - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\mmTodoListWebApp - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\strockisapp - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\strockisapp - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
