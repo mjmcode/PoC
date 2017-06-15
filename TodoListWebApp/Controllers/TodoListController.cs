@@ -53,9 +53,9 @@ namespace TodoListWebApp.Controllers
             try
             {
                 string userObjectID = ClaimsPrincipal.Current.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier").Value;
-                AuthenticationContext authContext = new AuthenticationContext(Startup.Authority, new NaiveSessionCache(userObjectID));
+                AuthenticationContext authContext = new AuthenticationContext(Startup.Authority, false);
                 ClientCredential credential = new ClientCredential(clientId, appKey);
-                result = await authContext.AcquireTokenSilentAsync(todoListResourceId, credential, new UserIdentifier(userObjectID, UserIdentifierType.UniqueId));
+                result = await authContext.AcquireTokenAsync(todoListResourceId, credential);
 
                 //
                 // Retrieve the user's To Do List.

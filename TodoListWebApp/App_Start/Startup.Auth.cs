@@ -51,7 +51,7 @@ namespace TodoListWebApp
         private static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];
         private static string redirectUri = ConfigurationManager.AppSettings["ida:RedirectUri"];
 
-        public static readonly string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);
+        public static readonly string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, "common");
 
         // This is the resource ID of the AAD Graph API.  We'll need this to request a token to call the Graph API.
         string graphResourceId = ConfigurationManager.AppSettings["ida:GraphResourceId"];
@@ -69,6 +69,7 @@ namespace TodoListWebApp
                     Authority = Authority,
                     PostLogoutRedirectUri = redirectUri,
                     RedirectUri = redirectUri,
+                    TokenValidationParameters = new System.IdentityModel.Tokens.TokenValidationParameters() { ValidateIssuer = false },
 
                     Notifications = new OpenIdConnectAuthenticationNotifications()
                     {
